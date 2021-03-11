@@ -1,0 +1,149 @@
+.card-home {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  border-radius: 1em;
+  box-shadow: 1px 5px 10px #ccdbf0;
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin-bottom: 0;
+  max-height: 97vh;
+  &.servicios {
+    padding-top: 1em;
+    height: 280px;
+  }
+  &.productos {
+    height: 450px;
+  }
+  &.is-image-a {
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    min-width: 100%;
+    .image-a {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+      }
+    }
+  }
+  .product {
+    .ContSS {
+      position: relative;
+      .sin_Stock {
+        width: 100%;
+        padding: 1rem;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.116);
+        span {
+          transform: translate(-50%, -50%);
+          text-transform: uppercase;
+          font-family: "Montserrat", sans-serif;
+          &.SinDispo {
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            background: hsl(338, 90%, 55%);
+            border: 1px solid hsl(338, 90%, 55%);
+            padding: 10px;
+            border-radius: 4px;
+          }
+          &.SinStock {
+            margin-top: 1rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 568px) {
+    &.servicios {
+      margin-top: 70px;
+    }
+    &:not(.card-login) {
+      overflow: visible !important;
+      height: auto;
+      .servi {
+        overflow: visible !important;
+        .card-row-profile {
+          flex-direction: column;
+          .container-perfil {
+            position: absolute;
+            top: -70px;
+            width: 120px;
+            height: 120px;
+          }
+          .card-col {
+            padding-top: 60px;
+          }
+        }
+      }
+    }
+    .card-row-profile {
+      margin: 0;
+    }
+  }
+}
+
+.container-perfil {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: hsl(199, 13%, 71%);
+  border-radius: 50%;
+  box-shadow: hsl(295, 100%, 33%) -16px -16px 0 -13px;
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.cards-wrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  @media screen and (min-width: 1601px) {
+    max-width: 70%;
+  }
+  @media screen and (min-width: 1440px) and (max-width: 1600px) {
+    max-width: 80%;
+  }
+  @media screen and (min-width: 569px) and (max-width: 1439px) {
+    max-width: 95%;
+  }
+  @media screen and (max-width: 568px) {
+    max-width: 100%;
+  }
+}
+
+.text-category {
+  text-align: left;
+  color: #1068d6;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.text-tittle-new{
+  text-align: left;  
+  font-weight: bold;
+  margin-bottom: 0;
+  font-size: 20px;
+  color:black;  
+}
